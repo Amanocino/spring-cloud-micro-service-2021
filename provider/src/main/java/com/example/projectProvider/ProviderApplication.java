@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EntityScan("com.example.springCloudMicroService2021.pojo")
-@MapperScan("com.example.springCloudMicroService2021.dao")
+@MapperScan(value = {"com.example.springCloudMicroService2021.dao", "com.example.projectProvider.mapper"})
 public class ProviderApplication {
 
     public static void main(String[] args) {
