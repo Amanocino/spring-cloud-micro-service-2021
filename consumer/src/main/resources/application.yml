@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: project-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.0.35:8848
+  profiles:
+    active: dev
+dubbo:
+  application:
+    name: project-consumer
+  registry:
+    address: nacos://172.16.0.35:8848
+server:
+  port: 8022

@@ -1,0 +1,11 @@
+[
+    {
+       "resource": "user-testDegrade",
+         "grade":   0,
+         "count":   1,
+         "timeWindow": 3,
+         "minRequestAmount": 1,
+         "statIntervalMs": 1000,
+         "slowRatioThreshold":1
+    }
+]

@@ -1,0 +1,9 @@
+dubbo:
+  application:
+    name: dubbo-springboot-demo-gateway
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: nacos://172.16.0.35:8848
+  cloud:
+    # 订阅服务提供方的应用列表，订阅多个服务提供者使用 "," 连接
+    subscribed-services: spring-cloud-micro-service-2021-provider
