@@ -36,6 +36,7 @@ spring:
             rule-type: degrade #类型来自RuleType类 - 熔断规则
 #mybatis-plus配置控制台打印完整带参数SQL语句
 mybatis-plus:
+  mapper-locations: classpath:com/example/projectProvider/mapper/xml/*.xml # xml文件地址
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: false # 禁止大写变小写时自动添加下划线

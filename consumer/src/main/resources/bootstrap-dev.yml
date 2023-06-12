@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: spring-cloud-micro-service-2021-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.0.35:8848  #Nacos 链接地址
+        namespace: 82dd8e34-d3c8-4320-980b-cbc3939365bf #Nacos 命名空间ID
+      config:
+        server-addr: 172.16.0.35:8848  #Nacos 链接地址
+        namespace: 82dd8e34-d3c8-4320-980b-cbc3939365bf #Nacos 命名空间ID
+        group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
+        file-extension: yml   #默认properties
+  profiles:
+    active: dev
+
+dubbo:
+  application:
+    name: project-consumer
+  registry:
+    address: nacos://172.16.0.35:8848
+server:
+  port: 8022
+testthread:
+  pool:
+    corePoolSize: 10
+    maxPoolSize: 20
+    keepAliveTime: 600
+

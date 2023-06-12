@@ -45,7 +45,8 @@ public class Generator {
 
 
 
-    public static void main(String[] args) {FastAutoGenerator.create(JDBC_URL, JDBC_USER_NAME, JDBC_PASSWORD)
+    public static void main(String[] args) {
+        FastAutoGenerator.create(JDBC_URL, JDBC_USER_NAME, JDBC_PASSWORD)
             // 全局配置
             .globalConfig((scanner, builder) -> builder.author(scanner.apply("请输入作者名称？")).outputDir("F:\\work\\java\\spring-cloud-micro-service-2021\\spring-cloud-micro-service-2021\\provider\\src\\main\\java1").fileOverride())
             // 包配置
