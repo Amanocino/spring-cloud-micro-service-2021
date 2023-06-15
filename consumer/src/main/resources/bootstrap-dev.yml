@@ -11,14 +11,15 @@ spring:
         namespace: 82dd8e34-d3c8-4320-980b-cbc3939365bf #Nacos 命名空间ID
         group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
         file-extension: yml   #默认properties
-  profiles:
-    active: dev
 
 dubbo:
   application:
     name: project-consumer
+    qos-port: 22223
   registry:
     address: nacos://172.16.0.35:8848
+  protocol:
+    port: 20881
 server:
   port: 8022
 testthread:

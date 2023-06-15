@@ -1,6 +1,7 @@
 package com.example.projectProvider.service;
 
 import com.alibaba.fastjson2.JSONObject;
+import com.example.springCloudMicroService2021.pojo.User;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,16 @@ class HelloServiceImplTest {
     private KafkaTemplate<String, String> kafkaTemplate;
     @Test
     public void testSend(){
-        for (int i = 0; i < 5000; i++) {
-            Map<String, Object> map = new LinkedHashMap<>();
-            map.put("datekey", 20210610);
-            map.put("userid", i);
-            map.put("salaryAmount", i);
+        for (int i = 0; i < 50000; i++) {
+//            Map<String, Object> map = new LinkedHashMap<>();
+//            map.put("datekey", 20210610);
+//            map.put("userid", i);
+//            map.put("salaryAmount", i);
+            User user = new User();
+            user.setUsername("name"+i);
+            user.setPassword("111");
             //向kafka的big_data_topic主题推送数据
-            kafkaTemplate.send("big_data_topic", JSONObject.toJSONString(map));
+            kafkaTemplate.send("big_data_topic", JSONObject.toJSONString(user));
         }
     }
 
