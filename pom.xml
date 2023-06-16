@@ -118,16 +118,17 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<!--lombok⼯具-->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.4</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
-		<!--lombok⼯具-->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.4</version>
-			<scope>provided</scope>
-		</dependency>
+
 		<!--spring cloud 2021版本之后默认不开始bootstrap.yml文件的读取，要读取配置文件需要引入该依赖		-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
