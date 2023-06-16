@@ -39,6 +39,10 @@ public class Result<T> {
         return new Result<>(errorResult.getCode(), errorResult.getMessage(), null);
     }
 
+    public static Result<?> failed(Integer code, String message) {
+        return new Result<>(code, message, null);
+    }
+
     public static <T> Result<T> instance(Integer code, String message, T data) {
         Result<T> result = new Result();
         result.setCode(code);
